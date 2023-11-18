@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('agenda');
             $table->string('deskripsi');
-            $table->time('tanggal');
+            $table->date('tanggal');
             $table->timestamps();
         });
     }

@@ -9,13 +9,14 @@
   <body>
     @include('templates/navbar')
     @if ($message = Session::get('success'))
-      <div class="alert alert-success">
-        <p class="pt-2">
-          {{ $message }}
+      <div class="alert alert-success alert-dismissible card container fade show" role="alert">
+        <p class="card-body">
+          <strong>{{ $message }}</strong>
         </p>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="padding-top: 55px;"></button>
       </div>
     @endif
-    <div class="list-todos">
+    <div class="list-todos container card mt-5">
       <table class="table">
         <thead>
           <tr>
